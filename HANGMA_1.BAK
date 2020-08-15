@@ -1,0 +1,716 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<dos.h>
+
+void wrong1()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm,"C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(20,50,100,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+}
+void wrong2()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(20,50,100,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+	line(75,140,35,180);
+}
+void wrong3()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+	line(75,140,35,180);
+	line(75,140,115,180);
+}
+void wrong4()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+	line(75,140,35,180);
+	line(75,140,115,180);
+	line(75,140,75,250);
+}
+void wrong5()
+
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+	line(75,140,35,180);
+	line(75,140,115,180);
+	line(75,140,75,250);
+	line(75,250,35,330);
+}
+void wrong6()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	line(20,50,20,400);
+	line(20,400,150,400);
+	line(20,50,150,50);
+	line(75,50,75,100);
+	circle(75,120,20);
+	line(75,140,35,180);
+	line(75,140,115,180);
+	line(75,140,75,250);
+	line(75,250,35,330);
+	line(75,250,115,330);
+	setcolor(RED);
+	outtextxy(50,450,"GAME OVER");
+}
+void correct()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm,"C:\\TURBOC3\\BGI");
+	outtextxy(200,150,"CORRECT!! ANSWER");
+}
+void game()
+{
+	char ch;
+	int gd=DETECT,gm,r,i,a=0;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	for(i=1;i<=10;i++)
+	{
+		r=i;
+		switch(r)
+		{
+			case 1:
+			    cleardevice();
+			    gotoxy(20,10);
+			    printf("The first month of the Indian national calendar is'?");
+			    gotoxy(20,13);
+			    printf("A.Magha");
+			    gotoxy(60,13);
+			    printf("B.Chaitra");
+			    gotoxy(20,20);
+			    printf("C.Baisakha");
+			    gotoxy(60,20);
+			    printf("D.Aasadha");
+			    input:
+			    ch=toupper(getch());
+			    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+			    {
+			     if(ch=='B')
+			     {
+				correct();
+			     }
+				 else
+				{
+					a=a+1;
+					if(a==1)
+					{
+						wrong1();
+					}
+					else if(a==2)
+					{
+						wrong2();
+					}
+					else if(a==3)
+					{
+					wrong3();
+					}
+					else if(a==4)
+					{
+					wrong4();
+					}
+					else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+				}
+				}
+				else
+					goto input;
+		case 2:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("What is the color of the Black Box in airplanes?");
+		    gotoxy(20,13);
+		    printf("A.White");
+		    gotoxy(60,13);
+		    printf("B.Black");
+		    gotoxy(20,20);
+		    printf("C.Orange");
+		    gotoxy(60,20);
+		    printf("D.Red");
+		    input2:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='C')
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+					a=a+1;
+					if(a==1)
+					{
+						wrong1();
+					}
+					else if(a==2)
+					{
+						wrong2();
+					}
+					else if(a==3)
+					{
+					wrong3();
+					}
+					else if(a==4)
+					{
+					wrong4();
+					}
+					else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+				}
+			       }
+			       else
+			       goto input2;
+
+		case 3:
+		    cleardevice();
+		    gotoxy(15,10);
+		    printf("Which film was awarded the Best Motion Picture at Oscar in 2010?");
+		    gotoxy(20,13);
+		    printf("A.The Secret in their Eyes");
+		    gotoxy(60,13);
+		    printf("B.Shutter Island");
+		    gotoxy(20,20);
+		    printf("C.The King's Speech");
+		    gotoxy(60,20);
+		    printf("D.The Reader");
+		    input3:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='C')
+		    {
+			correct();
+
+		    }
+		    else
+			    {
+					a=a+1;
+					if(a==1)
+					{
+						wrong1();
+					}
+					else if(a==2)
+					{
+						wrong2();
+					}
+					else if(a==3)
+					{
+					wrong3();
+					}
+					else if(a==4)
+					{
+					wrong4();
+					}
+					else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+				}
+				}
+				else
+				goto input3;
+		case 4:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("The 'Earth Summit' was held in June 1992 at");
+		    gotoxy(20,13);
+		    printf("A.New Delhi");
+		    gotoxy(60,13);
+		    printf("B.Paris");
+		    gotoxy(20,20);
+		    printf("C.Rio de Janeiro");
+		    gotoxy(60,20);
+		    printf("D.Washington");
+		    input4:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='C')
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+				}
+				}
+				else
+				goto input4;
+		case 5:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("'Good Friday' is observed to commemorate the event of");
+		    gotoxy(20,13);
+		    printf("A.Birth of Jesus Christ");
+		    gotoxy(60,13);
+		    printf("B.Birth of St. Peter");
+		    gotoxy(20,20);
+		    printf("C.Rebirth of Jesus Christ");
+		    gotoxy(60,20);
+		    printf("D.Crucification of");
+		    gotoxy(64,22);
+		    printf("Jesus Christ");
+		    input5:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='D')
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		    }
+		    }
+		    else
+		    goto input5;
+		 case 6:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("Which element is found in Vitamin B12?");
+		    gotoxy(20,13);
+		    printf("A.Zinc");
+		    gotoxy(60,13);
+		    printf("B.Cobalt");
+		    gotoxy(20,20);
+		    printf("C.Calcium");
+		    gotoxy(60,20);
+		    printf("D.Iron");
+		    input6:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='B' )
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		       }
+		       }
+		       else
+		       goto input6;
+		 case 7:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("Who is the author of 'Pulpasa Cafe'?");
+		    gotoxy(20,13);
+		    printf("A.Narayan Wagle");
+		    gotoxy(60,13);
+		    printf("B.Lal Gopal Subedi");
+		    gotoxy(20,20);
+		    printf("C.B.P. Koirala");
+		    gotoxy(60,20);
+		    printf("D.Khagendra Sangraula");
+		    input7:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='A')
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		      }
+		      }
+		      else
+			goto input7;
+		case 8:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("Which day is observed as the World Standards Day?");
+		    gotoxy(20,13);
+		    printf("A.Nov 15");
+		    gotoxy(60,13);
+		    printf("B.Oct 14");
+		    gotoxy(20,20);
+		    printf("C.Nov 20");
+		    gotoxy(60,20);
+		    printf("D.Dec 2");
+		    input8:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='B' )
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		      }
+		      }
+		      else
+		      goto input8;
+		case 9:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("The country famous for Samba Dance is__________?");
+		    gotoxy(20,13);
+		    printf("A.Brazil");
+		    gotoxy(60,13);
+		    printf("B.Venezuela");
+		    gotoxy(20,20);
+		    printf("C.Nigeria");
+		    gotoxy(60,20);
+		    printf("D.Bolivia");
+		    input9:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='A' )
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		      }
+		      }
+		      else
+		      goto input9;
+		case 10:
+		    cleardevice();
+		    gotoxy(20,10);
+		    printf("Who won the Women's Australian Open Tennis in 2007?");
+		    gotoxy(20,13);
+		    printf("A.Martina Hingis");
+		    gotoxy(60,13);
+		    printf("B.Maria Sarapova");
+		    gotoxy(20,20);
+		    printf("C.Kim Clijster");
+		    gotoxy(60,20);
+		    printf("D.Serena Williams");
+		    input10:
+		    ch=toupper(getch());
+		    if(ch=='A' || ch=='B' || ch=='C' || ch=='D')
+		    {
+		    if(ch=='D' )
+		    {
+			correct();
+
+		    }
+		    else
+		    {
+			a=a+1;
+			if(a==1)
+			{
+				wrong1();
+			}
+			else if(a==2)
+			{
+				wrong2();
+			}
+			else if(a==3)
+			{
+				wrong3();
+			}
+			else if(a==4)
+			{
+				wrong4();
+			}
+			else if(a==5)
+					{
+						wrong5();
+					}
+					else if(a==6)
+					{
+						wrong6();
+						return;
+					}
+		      }
+		      }
+		      else
+		      goto input10;
+		}
+	}
+}
+void help()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	setcolor(GREEN);
+	rectangle(1,1,600,470);
+	setcolor(RED);
+	outtextxy(20,40,"You will ask a Question.Each Question Have 4 Option.");
+	outtextxy(20,70,"If you give Correct Answer, Next question will ask.");
+	outtextxy(20,100,"If you give Wrong answer, Each part of body will Hanged.");
+	outtextxy(20,130,"Only 6 wrong answer will be acceptable.");
+	outtextxy(20,160,"You need to give right answer of 15 question to end Game.");
+	outtextxy(20,200,"***************************GOOD LUCK***********************************");
+}
+void exit()
+{
+	int gd=DETECT,gm;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	setcolor(WHITE);
+	settextstyle(3,0,7);
+	outtextxy(50,200,"Thanks for Playing.");
+	outtextxy(10,260,"Developed By Gaurav");
+	outtextxy(150,320,"and Prasiddha");
+	closegraph();
+}
+void main()
+{
+	int gd=DETECT,gm,opt;
+	clrscr();
+	initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+	home:
+	setcolor(GREEN);
+	settextstyle(3,0,6);
+	outtextxy(0,10,"WELCOME TO HANGMAN");
+	outtextxy(250,80,"GAME");
+	settextstyle(0,0,0);
+	setcolor(RED);
+	rectangle(200,200,300,250);
+	outtextxy(205,216,"S.Start");
+	rectangle(400,200,500,250);
+	outtextxy(405,216,"H.HELP");
+	rectangle(300,300,400,350);
+	outtextxy(310,310,"Q.QUIT");
+	rectangle(200,400,500,450);
+	outtextxy(240,420,"DEVELOP BY CSIT I/II");
+	opt=toupper(getch());
+	if(opt=='S')
+	{
+		game();
+		goto home;
+	}
+	else if(opt=='H')
+	{
+		help();
+		goto home;
+	}
+	else if(opt=='Q')
+	{
+		exit(0);
+	}
+	else
+	{
+		goto home;
+	}
+	getch();
+	closegraph();
+}
